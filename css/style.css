@@ -13,17 +13,19 @@ body {
 }
 
 h1 {
-  margin-bottom: 10px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
   margin-bottom: 20px;
 }
 
-/* Плеєр на всю ширину */
+/* обкладинка */
+.cover {
+  width: 100%;
+  max-width: 500px;  /* можна змінити */
+  border-radius: 16px;  /* округлі кути */
+  display: block;
+  margin: 0 auto 20px;  /* по центру і відступ знизу */
+}
+
+/* стандартний плеєр */
 audio {
   width: 100%;
 }
