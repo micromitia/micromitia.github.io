@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1</title>
-
-<link rel="stylesheet" href="/css/player.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+
 <div class="container">
   <h1>1</h1>
 
-  <div class="cover-wrapper" id="togglePlay">
+  <div class="cover-wrapper" id="playButton">
     <img src="cover.jpg" alt="cover">
-    <div class="play-icon"></div>
+    <div class="play-icon" id="icon"></div>
   </div>
 
-  <audio id="player">
+  <!-- стандартний плеєр -->
+  <audio id="audio" controls>
     <source src="1.mp3" type="audio/mpeg">
   </audio>
 </div>
 
-<script src="/js/player.js"></script>
+<script src="../js/player.js"></script>
 </body>
 </html>
