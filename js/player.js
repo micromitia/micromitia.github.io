@@ -2,7 +2,7 @@ const audio = document.getElementById("audio");
 const playButton = document.getElementById("playButton");
 const icon = document.getElementById("icon");
 
-// клік по картинці
+/* клік по обкладинці */
 playButton.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
@@ -11,17 +11,20 @@ playButton.addEventListener("click", () => {
   }
 });
 
-// коли аудіо реально стартує
+/* синхронізація зі стандартним плеєром */
 audio.addEventListener("play", () => {
   icon.textContent = "pause";
 });
 
-// коли аудіо реально зупиняється
 audio.addEventListener("pause", () => {
   icon.textContent = "play_arrow";
 });
 
-// коли трек дограв до кінця
 audio.addEventListener("ended", () => {
   icon.textContent = "play_arrow";
+});
+
+/* прибити long-press / контекстне меню на Android */
+playButton.addEventListener("contextmenu", e => {
+  e.preventDefault();
 });
