@@ -5,13 +5,13 @@ const icon = document.getElementById("icon");
 button.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    icon.classList.add("pause");
+    icon.textContent = "pause";
   } else {
     audio.pause();
-    icon.classList.remove("pause");
+    icon.textContent = "play_arrow";
   }
 });
 
 audio.addEventListener("ended", () => {
-  icon.classList.remove("pause");
+  icon.textContent = "play_arrow";
 });
