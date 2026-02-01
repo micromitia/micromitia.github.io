@@ -2,9 +2,9 @@ body {
   background: #111;
   color: white;
   font-family: sans-serif;
-  text-align: center;
-  padding: 20px;
   margin: 0;
+  padding: 20px;
+  text-align: center;
 }
 
 .container {
@@ -12,52 +12,63 @@ body {
   margin: auto;
 }
 
-img {
-  width: 100%;
-  border-radius: 15px;
+h1 {
+  margin-bottom: 10px;
 }
 
-audio {
-  width: 100%;
-  margin-top: 20px;
-}
-
+/* обкладинка */
 .cover-wrapper {
   position: relative;
   cursor: pointer;
 }
 
+.cover-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* кнопка play/pause */
 .play-icon {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,0.6);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
+/* трикутник Play */
 .play-icon::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
-  left: 55%;
+  left: 52%;
   transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 22px solid white;
+  border-style: solid;
+  border-width: 14px 0 14px 22px;
+  border-color: transparent transparent transparent white;
 }
 
-.playing .play-icon::before {
-  width: 18px;
-  height: 22px;
+/* Pause */
+.play-icon.pause::before {
   border: none;
-  background:
-    linear-gradient(to right,
-      white 0 40%,
-      transparent 40% 60%,
-      white 60% 100%);
+  width: 16px;
+  height: 24px;
+  background: white;
+  box-shadow: 20px 0 0 white;
+  left: 50%;
+}
+
+/* стандартний плеєр */
+audio {
+  width: 100%;
+  margin-top: 20px;
 }
