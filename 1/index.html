@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
 <div class="container">
   <h1>1</h1>
-  <img src="cover.jpg" alt="cover" class="cover">
 
-  <!-- стандартний HTML5 плеєр -->
-  <audio controls>
+  <div class="cover-wrapper" id="playButton">
+    <img src="cover.jpg" alt="cover">
+    <span class="material-icons" id="icon">play_arrow</span>
+  </div>
+
+  <!-- стандартний плеєр видно -->
+  <audio id="audio" controls>
     <source src="1.mp3" type="audio/mpeg">
-    Ваш браузер не підтримує аудіо.
   </audio>
 </div>
 
+<script src="../js/player.js"></script>
 </body>
 </html>
