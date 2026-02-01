@@ -16,6 +16,17 @@ h1 {
   margin-bottom: 10px;
 }
 
+/* прибрати Android tap highlight */
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* заборонити виділення / long press */
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* обкладинка */
 .cover-wrapper {
   position: relative;
@@ -23,26 +34,31 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* сама картинка */
 .cover-wrapper img {
   width: 100%;
   border-radius: 30px;
   display: block;
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none; /* щоб Android не чіпляв img */
 }
 
-/* кнопка Play/Pause */
+/* кнопка Play / Pause */
 .cover-wrapper .material-icons {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 72px;       /* розмір кнопки */
-  color: white;
   transform: translate(-50%, -50%);
-  background: rgba(50,50,50,0.5);
+  font-size: 72px;
+  color: white;
+  background: rgba(50,50,50,0.6);
   border-radius: 50%;
-  padding: 10px;
+  padding: 14px;
+  pointer-events: none; /* кліки проходять крізь іконку */
 }
 
-/* стандартний плеєр залишається видимим */
+/* стандартний плеєр */
 audio {
   width: 100%;
   margin-top: 10px;
