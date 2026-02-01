@@ -1,16 +1,17 @@
-const audio = document.getElementById('player');
-const wrapper = document.getElementById('togglePlay');
+const audio = document.getElementById("audio");
+const button = document.getElementById("playButton");
+const icon = document.getElementById("icon");
 
-wrapper.addEventListener('click', () => {
+button.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    wrapper.classList.add('playing');
+    icon.classList.add("pause");
   } else {
     audio.pause();
-    wrapper.classList.remove('playing');
+    icon.classList.remove("pause");
   }
 });
 
-audio.addEventListener('ended', () => {
-  wrapper.classList.remove('playing');
+audio.addEventListener("ended", () => {
+  icon.classList.remove("pause");
 });
